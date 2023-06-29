@@ -1,0 +1,67 @@
+body {
+	user-select: none;
+	overflow-y: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: hsl(218deg 50% 91%);
+	height: 100vh;
+}
+.login-box{
+display: flex;
+height: 50vh;
+background-color: aqua;
+align-items: center;
+justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+    
+  .login-box{
+    width: 75vw;
+  }
+    #btn{
+        width: 70vw;
+        font-size:2ch;
+    }
+    #name{
+        width: 70vw;
+        font-size:2ch;
+    }
+    
+
+}
+
+@media only screen and (min-width: 601px) {
+    
+  .login-box{
+    width: 25vw;
+  }
+    #btn{
+        width: 20vw;
+    }
+    #name{
+        width: 20vw;
+        
+    }
+    
+
+}
+.btn-div {
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+    padding: 10%;
+}
+.txt-div{
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+    height: 5vh;
+   
+}
+.clr-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
