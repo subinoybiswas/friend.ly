@@ -24,23 +24,30 @@ const db = getFirestore();
 app.use(express.json());
 
 app.get("/hi", async (req, res) => {
-  const { name } = req.body;
-  docRef = db.collection("Names").doc(name);
+  const id = req.query.id;
+  if(id!=undefined){
+  docRef = db.collection(id);
   data = await docRef.get();
-  if (data.data() != undefined) {
-    res.status(200).send(data.data());
+  a = data.docs.map((doc) => doc.data());
+  if (a != undefined) {
+    res.status(200).send(a);
   }
+  res.status(400).send();}
   res.status(400).send();
 });
 
 app.post("/hi", async (req, res) => {
-  const { name, id } = req.body;
-  docRef = db.collection("Names").doc(name);
+  const { MaskedName, message } = req.body;
+  const id = req.query.id;
+  if (id == undefined || MaskedName == undefined || message == undefined) {
+    res.status(400).send();
+  }
+  else{
+  docRef = db.collection(id).doc(MaskedName);
   docRef.set({
-    name: name,
-    id: id,
+    message: message,
   });
-  res.status(200).send();
+  res.status(200).send();}
 });
 
 console.log("Revolution has begun!");
