@@ -2,5 +2,6 @@ POST http://localhost:1000/hi
 Content-Type: application/json
 
 {
-"meow":"hulo"
+"name":"Meow",
+"id":"2345678"
 }
