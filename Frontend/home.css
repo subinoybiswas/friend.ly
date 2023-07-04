@@ -1,67 +1,79 @@
 body {
-	user-select: none;
-	overflow-y: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: hsl(218deg 50% 91%);
-	height: 100vh;
+  user-select: none;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("bg-img.svg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
 }
-.login-box{
-display: flex;
-height: 50vh;
-background-color: aqua;
-align-items: center;
-justify-content: center;
+.login-box {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  padding-top: 37.5%;
+  padding-bottom: 37.5%;
+  align-items: center;
+  justify-content: center;
+  border: 6px solid transparent;
+  /* background-color:#302244; */
+  background-color: rgba(38, 14, 71, 0.8);
+  
+  border-image: linear-gradient(
+    to bottom right,
+    #b827fc 0%,
+    #2c90fc 25%,
+    #b8fd33 50%,
+    #fec837 75%,
+    #fd1892 100%
+  );
+  border-image-slice: 1;
+  background-origin: border-box;
 }
 @media only screen and (max-width: 600px) {
-    
-  .login-box{
-    width: 75vw;
+  .login-box {
+    width: 40vh;
   }
-    #btn{
-        width: 70vw;
-        font-size:2ch;
-    }
-    #name{
-        width: 70vw;
-        font-size:2ch;
-    }
-    
 
+  #name {
+    width: 35vh;
+    height: 6vh;
+    margin-bottom: 2%;
+  }
 }
 
 @media only screen and (min-width: 601px) {
-    
-  .login-box{
-    width: 25vw;
+  .login-box {
+    width: 55vh;
   }
-    #btn{
-        width: 20vw;
-    }
-    #name{
-        width: 20vw;
-        
-    }
-    
+  /* #btn { */
+  /* width: 20vh; */
+  /* height: 4vh; */
+  /*  */
+  /* } */
+  #name {
+    width: 45vh;
+    height: 7vh;
+    margin-bottom: 35px;
+  }
+}
 
+#btn {
+  border-radius: 50%;
+  padding: 10px;
 }
-.btn-div {
-    display: flex;
-    justify-content: center;
-    background-color: antiquewhite;
-    padding: 10%;
+
+#name {
+  font-size: 2.7ch;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.txt-div{
-    display: flex;
-    justify-content: center;
-    background-color: antiquewhite;
-    height: 5vh;
-   
-}
-.clr-box{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
+
+img {
+  width: 35px;
+  height: 35px;
 }
