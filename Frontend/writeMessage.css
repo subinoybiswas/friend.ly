@@ -22,7 +22,7 @@ body {
   width: 45vh;
   padding-top: 25vh;
   padding-bottom: 25vh;
-  background-color: aliceblue;
+  background-color:  rgba(29, 6, 61, 0.9);
   border-radius: 10px;
   border: 10px solid transparent;
   border-image: linear-gradient(
@@ -38,6 +38,7 @@ body {
 .name {
   font-size: 4ch;
   margin-bottom: 20px;
+  color: aliceblue;
 }
 @media only screen and (max-width: 600px) {
   .msg-box {

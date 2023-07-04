@@ -10,7 +10,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  
 }
 .login-box {
   display: flex;
@@ -22,8 +21,8 @@ body {
   justify-content: center;
   border: 6px solid transparent;
   /* background-color:#302244; */
-  background-color: rgba(38, 14, 71, 0.8);
-  
+  background-color: rgba(29, 6, 61, 0.9);
+
   border-image: linear-gradient(
     to bottom right,
     #b827fc 0%,
@@ -38,12 +37,13 @@ body {
 @media only screen and (max-width: 600px) {
   .login-box {
     width: 40vh;
+    
   }
 
   #name {
     width: 35vh;
-    height: 6vh;
-    margin-bottom: 2%;
+    min-height: 7vh;
+    
   }
 }
 
@@ -60,6 +60,11 @@ body {
     width: 45vh;
     height: 7vh;
     margin-bottom: 35px;
+    transition: height 0.2s width 0.2s;
+  }
+  #name:focus {
+    width: 46vh;
+    height: 8vh;
   }
 }
 
@@ -69,11 +74,19 @@ body {
 }
 
 #name {
-  font-size: 2.7ch;
+  font-size: 2.5ch;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 img {
   width: 35px;
   height: 35px;
+  user-select: none;
+}
+.name-txt {
+  text-align: center;
+  width: 45vh;
+  font-size: 4ch;
+  margin-bottom: 20px;
+  color: aliceblue;
 }
