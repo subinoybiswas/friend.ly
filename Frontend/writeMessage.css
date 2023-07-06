@@ -10,7 +10,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font: "Franklin Gothic Medium";
+  font-family: 'Roboto', sans-serif;
 }
 
 .msg-box {
@@ -22,9 +22,9 @@ body {
   width: 45vh;
   padding-top: 25vh;
   padding-bottom: 25vh;
-  background-color:  rgba(29, 6, 61, 0.9);
+  background-color:  rgba(35, 32, 95, 0.7);
   border-radius: 10px;
-  border: 10px solid transparent;
+  border: 7px solid transparent;
   border-image: linear-gradient(
     to bottom right,
     #b827fc 0%,
@@ -74,7 +74,6 @@ body {
   /*  */
   /* } */
   textarea.msg-input {
-    font-family: "Times New Roman", Times, serif;
     font-size: 2ch;
     font-style: normal;
     width: 45vh;

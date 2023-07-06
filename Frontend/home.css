@@ -10,6 +10,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Roboto', sans-serif;
 }
 .login-box {
   display: flex;
@@ -21,7 +22,7 @@ body {
   justify-content: center;
   border: 6px solid transparent;
   /* background-color:#302244; */
-  background-color: rgba(29, 6, 61, 0.9);
+  background-color: rgba(35, 32, 95, 0.7);
 
   border-image: linear-gradient(
     to bottom right,
@@ -75,7 +76,7 @@ body {
 
 #name {
   font-size: 2.5ch;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
 }
 
 img {

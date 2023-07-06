@@ -1,0 +1,149 @@
+body {
+  user-select: none;
+  /* overflow-y: hidden; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("bg-img.svg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+.welcome-box-parent {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+.parent {
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+}
+.msg-box {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+@media only screen and (max-width: 1000px) {
+  .welcome-box {
+    /* background-color: aliceblue; */
+    width: 70vw;
+    height: 20vh;
+  }
+  .msg-box-inner {
+    height: 30vh;
+    width: 90vw;
+    border-style: dashed;
+    border-width: 2px;
+    margin-bottom: 5px;
+    background-color: rgb(38, 33, 121, 0.8);
+    overflow-y: hidden;
+    transition: height 0.4s;
+    padding: 1vh;
+  }
+  .msg-box-inner:hover {
+    overflow-y: scroll;
+    height: 50vh;
+  }
+  .sender {
+    font-size: 3ch;
+    margin-bottom: 20px;
+    color: aliceblue;
+  }
+  .msg {
+    color: antiquewhite;
+    max-height: 25vh;
+    overflow-wrap: break-word;
+    padding: 3px;
+    padding-bottom: 7px;
+  }
+  .real-name {
+    font-size: 2.3ch;
+    margin-bottom: 20px;
+    color: rgb(170, 206, 238);
+    text-align: center;
+    overflow-wrap: break-word;
+    /* overflow:scroll; */
+  }
+
+  /* .wlc-msg{ */
+  /* font-size:2.5ch */
+  /* } */
+  .no-more {
+    font-size: 2ch;
+    /* margin-bottom: 20px; */
+    color: aliceblue;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .welcome-box {
+    /* background-color: aliceblue; */
+    width: 70vw;
+    height: 20vh;
+  }
+  .msg-box-inner {
+    height: 30vh;
+    width: 50vw;
+    border-style: dashed;
+    border-width: 2px;
+    margin-bottom: 5px;
+    background-color: rgb(38, 33, 121, 0.8);
+    overflow-y: hidden;
+    transition: height 0.4s;
+    padding: 1vh;
+  }
+  .msg-box-inner:hover {
+    overflow-y: scroll;
+    height: 50vh;
+  }
+  .sender {
+    font-size: 3ch;
+    margin-bottom: 20px;
+    color: aliceblue;
+  }
+  .msg {
+    color: rgb(230, 224, 217);
+    max-height: 25vh;
+    overflow-wrap: break-word;
+    padding: 3px;
+    padding-bottom: 7px;
+  }
+  .real-name {
+    font-size: 2.3ch;
+    margin-bottom: 20px;
+    color: rgb(170, 206, 238);
+    text-align: center;
+    overflow-wrap: break-word;
+    /* overflow:scroll; */
+  }
+
+  /* .wlc-msg{ */
+  /* font-size:2.5ch */
+  /* } */
+  .no-more {
+    font-size: 2ch;
+    /* margin-bottom: 20px; */
+    color: aliceblue;
+  }
+}
+
+.msg-box-inner {
+  border: 3px solid transparent;
+  border-image: linear-gradient(
+    to bottom right,
+    #b827fc 0%,
+    #2c90fc 25%,
+    #b8fd33 50%,
+    #fec837 75%,
+    #fd1892 100%
+  );
+  border-image-slice: 1;
+}
