@@ -22,7 +22,7 @@ body {
   justify-content: center;
   border: 6px solid transparent;
   /* background-color:#302244; */
-  background-color: rgba(35, 32, 95, 0.7);
+  background-color:  (35,167,144);
 
   border-image: linear-gradient(
     to bottom right,

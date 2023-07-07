@@ -25,14 +25,19 @@ app.use(express.json());
 
 app.get("/hi", async (req, res) => {
   const id = req.query.id;
-  if(id!=undefined){
-  docRef = db.collection(id);
-  data = await docRef.get();
-  a = data.docs.map((doc) => doc.data());
-  if (a != undefined) {
-    res.status(200).send(a);
+  if (id != undefined) {
+    docRef = db.collection(id);
+    data = await docRef.get();
+    a = data.docs.map((doc) => {
+      a = doc.data();
+      a["name"] = doc.id;
+      return a;
+    });
+    if (a != undefined) {
+      res.status(200).json(a);
+    }
+    res.status(400).send();
   }
-  res.status(400).send();}
   res.status(400).send();
 });
 
@@ -41,14 +46,17 @@ app.post("/hi", async (req, res) => {
   const id = req.query.id;
   if (id == undefined || MaskedName == undefined || message == undefined) {
     res.status(400).send();
+  } else {
+    docRef = db.collection(id).doc(MaskedName);
+    docRef.set({
+      message: message,
+    });
+    res.status(200).send();
   }
-  else{
-  docRef = db.collection(id).doc(MaskedName);
-  docRef.set({
-    message: message,
-  });
-  res.status(200).send();}
 });
-
-console.log("Revolution has begun!");
+app.use(express.static(path.join(__dirname, "../Frontend")));
+console.log("Revolution has begun");
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../Frontend/viewMessages.html"));
+});
 app.listen(1000);

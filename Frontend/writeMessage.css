@@ -10,7 +10,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .msg-box {
@@ -22,7 +22,7 @@ body {
   width: 45vh;
   padding-top: 25vh;
   padding-bottom: 25vh;
-  background-color:  rgba(35, 32, 95, 0.7);
+  background-color: rgba(35, 32, 95, 0.7);
   border-radius: 10px;
   border: 7px solid transparent;
   border-image: linear-gradient(

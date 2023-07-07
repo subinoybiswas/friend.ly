@@ -43,7 +43,7 @@ body {
     border-style: dashed;
     border-width: 2px;
     margin-bottom: 5px;
-    background-color: rgb(38, 33, 121, 0.8);
+    background-color: #e9f4f2;
     overflow-y: hidden;
     transition: height 0.4s;
     padding: 1vh;
@@ -55,10 +55,8 @@ body {
   .sender {
     font-size: 3ch;
     margin-bottom: 20px;
-    color: aliceblue;
   }
   .msg {
-    color: antiquewhite;
     max-height: 25vh;
     overflow-wrap: break-word;
     padding: 3px;
@@ -95,7 +93,7 @@ body {
     border-style: dashed;
     border-width: 2px;
     margin-bottom: 5px;
-    background-color: rgb(38, 33, 121, 0.8);
+    background-color: #e9f4f2;
     overflow-y: hidden;
     transition: height 0.4s;
     padding: 1vh;
@@ -107,10 +105,10 @@ body {
   .sender {
     font-size: 3ch;
     margin-bottom: 20px;
-    color: aliceblue;
+    color: rgb(7, 26, 42);
   }
   .msg {
-    color: rgb(230, 224, 217);
+    color: rgb(7, 29, 62);
     max-height: 25vh;
     overflow-wrap: break-word;
     padding: 3px;
