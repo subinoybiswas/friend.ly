@@ -1,7 +1,7 @@
-POST http://localhost:1000/hi?id=1231
+POST http://localhost:1000/hi?id=HI
 Content-Type: application/json
 
 {
-"MaskedName":"SubhStalker",
-"message":"Ki Bhaii"
+"MaskedName":"SubhStalkfgdher",
+"message":"hi"
 }

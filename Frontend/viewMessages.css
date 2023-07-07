@@ -38,19 +38,20 @@ body {
     height: 20vh;
   }
   .msg-box-inner {
-    height: 30vh;
+    min-height: 15vh;
+    max-height: 30vh;
     width: 90vw;
     border-style: dashed;
     border-width: 2px;
     margin-bottom: 5px;
     background-color: #e9f4f2;
     overflow-y: hidden;
-    transition: height 0.4s;
+    transition: min-height 0.4s;
     padding: 1vh;
   }
-  .msg-box-inner:hover {
+  .msg-box-inner:hover{
     overflow-y: scroll;
-    height: 50vh;
+    min-height: 50vh;
   }
   .sender {
     font-size: 3ch;
@@ -65,7 +66,7 @@ body {
   .real-name {
     font-size: 2.3ch;
     margin-bottom: 20px;
-    color: rgb(170, 206, 238);
+    color: rgb(18, 86, 150);
     text-align: center;
     overflow-wrap: break-word;
     /* overflow:scroll; */
@@ -88,19 +89,20 @@ body {
     height: 20vh;
   }
   .msg-box-inner {
-    height: 30vh;
+    min-height: 20vh;
+    max-height: 35vh;
     width: 50vw;
     border-style: dashed;
     border-width: 2px;
     margin-bottom: 5px;
     background-color: #e9f4f2;
     overflow-y: hidden;
-    transition: height 0.4s;
+    transition: min-height 0.4s;
     padding: 1vh;
   }
-  .msg-box-inner:hover {
+  .msg-box-inner:active {
     overflow-y: scroll;
-    height: 50vh;
+    min-height: 50vh;
   }
   .sender {
     font-size: 3ch;
@@ -117,7 +119,7 @@ body {
   .real-name {
     font-size: 2.3ch;
     margin-bottom: 20px;
-    color: rgb(170, 206, 238);
+    color: aliceblue;
     text-align: center;
     overflow-wrap: break-word;
     /* overflow:scroll; */
@@ -130,6 +132,7 @@ body {
     font-size: 2ch;
     /* margin-bottom: 20px; */
     color: aliceblue;
+    margin-bottom: 7vh;
   }
 }
 
@@ -145,3 +148,11 @@ body {
   );
   border-image-slice: 1;
 }
+#developer{
+    margin-top: 3vh;
+    position: relative;
+    bottom: 0.5vh;
+    color: rgb(4, 102, 188);
+    font-weight: bold;
+    margin-bottom: 2vh;
+  }

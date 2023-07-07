@@ -4,16 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="writeMessage.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="write.js"></script>
     <title>friend.ly</title>
   </head>
   <body>
     <div class="msg-box">
-      <div class="name">Hey, Subinoy</div>
-      <textarea class="msg-input" placeholder="Type your Message Here">abc</textarea>
-      <button class="send">Send</button>
+      <div class="name">Confess to</div>
+      <input type="text" id="name" placeholder="Enter a fake name" />
+      <textarea class="msg-input" placeholder="Type your Message Here">
+</textarea
+      >
+      <button id="btn" onclick="sendPOST()">
+        <img class="btn-img" src="app-g2f8bdbdec_1280.png" alt="arrow" />
+      </button>
     </div>
+    <a href="https://linktr.ee/heysubinoy" id="developer">
+      <div >Developed by Subinoy Biswas</div>
+  </a>
   </body>
 </html>

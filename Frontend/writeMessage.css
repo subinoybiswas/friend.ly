@@ -42,15 +42,18 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .msg-box {
-    width: 40vh;
+    width: 90vw;
     overflow-y: auto;
     scroll-behavior: auto;
+    text-align: center;
   }
 
   .msg-input {
-    width: 35vh;
-    min-height: 4vh;
+    width: 80vw;
+    min-height: 7vh;
     margin-bottom: 2vh;
+    font-size: 2ch;
+    font-family: "Roboto", sans-serif;
     transition: min-height 0.3s ease-out;
   }
   .msg-input:focus {
@@ -59,6 +62,12 @@ body {
   button {
     width: 15vh;
     min-height: 5vh;
+  }
+  #name {
+    width: 80vw;
+    min-height: 5vh;
+    font-size: 2ch;
+    margin-bottom: 2vh;
   }
 }
 
@@ -75,7 +84,7 @@ body {
   /* } */
   textarea.msg-input {
     font-size: 2ch;
-    font-style: normal;
+    font-family: "Roboto", sans-serif;;
     width: 45vh;
     min-height: 5vh;
     resize: none;
@@ -85,8 +94,30 @@ body {
   textarea.msg-input:focus {
     min-height: 40vh;
   }
-  button {
+  /* button {
     width: 20vh;
     min-height: 5vh;
+  } */
+  #name {
+    width: 45vh;
+    min-height: 5vh;
+    font-size: 2ch;
+    margin-bottom: 2vh;
   }
+}
+
+#developer {
+  position: absolute;
+  bottom: 2vh;
+  color: aliceblue;
+}
+
+#btn {
+  border-radius: 50%;
+  padding: 10px;
+}
+img {
+  width: 35px;
+  height: 35px;
+  user-select: none;
 }

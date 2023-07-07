@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+var randomstring = require("randomstring");
 const {
   initializeApp,
   applicationDefault,
@@ -54,9 +55,30 @@ app.post("/hi", async (req, res) => {
     res.status(200).send();
   }
 });
+
+app.post("/register", async (req, res) => {
+  const { myName } = req.body;
+  if (myName == undefined || myName == null) {
+    res.status.send();
+  } else {
+    k = randomstring.generate();
+    console.log(k);
+    docRef = db.collection(k).doc("sQaNcfpgRu7wyzNHfeNDgB7cJil3cb8eYH9pMpTp");
+    docRef.set({
+      myName: myName,
+    });
+    res.status(200).send({ id: k });
+  }
+});
 app.use(express.static(path.join(__dirname, "../Frontend")));
 console.log("Revolution has begun");
-app.get("/", (req, res) => {
+app.get("/view", (req, res) => {
   res.sendFile(path.join(__dirname, "../Frontend/viewMessages.html"));
+});
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../Frontend/home.html"));
+});
+app.get("/send", (req, res) => {
+  res.sendFile(path.join(__dirname, "../Frontend/writeMessage.html"));
 });
 app.listen(1000);

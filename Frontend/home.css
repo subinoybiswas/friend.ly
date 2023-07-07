@@ -10,7 +10,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .login-box {
   display: flex;
@@ -22,7 +22,7 @@ body {
   justify-content: center;
   border: 6px solid transparent;
   /* background-color:#302244; */
-  background-color:  (35,167,144);
+  background-color: rgba(35, 32, 95, 0.7);
 
   border-image: linear-gradient(
     to bottom right,
@@ -37,14 +37,22 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .login-box {
-    width: 40vh;
-    
+    width: 90vw;
+    height: 70vh;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   #name {
-    width: 35vh;
+    width: 80vw;
     min-height: 7vh;
-    
+    margin-bottom: 2vh;
+  }
+  .name-txt {
+    text-align: center;
+    font-size: 1ch;
+    margin-bottom: 20px;
+    color: aliceblue;
   }
 }
 
@@ -59,7 +67,7 @@ body {
   /* } */
   #name {
     width: 45vh;
-    height: 7vh;
+    min-height: 8vh;
     margin-bottom: 35px;
     transition: height 0.2s width 0.2s;
   }
@@ -88,6 +96,14 @@ img {
   text-align: center;
   width: 45vh;
   font-size: 4ch;
+  font-weight: bold;
   margin-bottom: 20px;
+  color: aliceblue;
+  padding-left: 3vh;
+  padding-right: 3vh;
+}
+#developer {
+  position: absolute;
+  bottom: 2vh;
   color: aliceblue;
 }

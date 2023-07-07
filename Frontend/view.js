@@ -6,6 +6,7 @@ const urlParams = new URLSearchParams(queryString);
 var id = urlParams.get("id");
 console.log(id);
 doc = document.getElementsByClassName("msg-box");
+useName = document.getElementsByTagName("h1");
 
 const xhr = new XMLHttpRequest();
 
@@ -35,7 +36,14 @@ xhr.onload = () => {
     count = 0;
     if (resp != null && resp != undefined) {
       res.forEach((ele) => {
-        createElement(ele.name, ele.message, count);
+        if (count != res.length - 1 && count < res.length - 1) {
+          createElement(ele.name, ele.message, count);
+        } else if (count == res.length + 1);
+        {
+          console.log(ele.myName);
+          userName = ele.myName;
+          useName[0].innerText = "Welcome, "+userName;
+        }
         count += 1;
       });
     }
@@ -47,6 +55,8 @@ xhr.onload = () => {
     // createElement("Subinoy", "How are you!");
   } else {
     console.log(`Error: ${xhr.status}`);
+    noMore = document.createElement("div");
+    noMore.className = "no-more";
     noMore.innerHTML = "You don't have any messages yet!";
     doc[0].appendChild(noMore);
   }
