@@ -46,9 +46,9 @@ app.get("/hi", async (req, res) => {
         res.status(200).json(a);
       }
     } else {
-      res.status(400).send();
+      res.status(503).send();
     }
-    
+
     res.status(400).send();
   }
   res.status(400).send();

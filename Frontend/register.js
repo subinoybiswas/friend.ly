@@ -15,7 +15,7 @@ function send() {
         resp = xhr.response;
         res = JSON.parse(resp);
         lnk1 = htt + "//" + domain + "/view?id=" + res.id + "&pass=" + res.pass;
-        lnk2 = htt + "//" + domain + "?id=" + res.id;
+        lnk2 = htt + "//" + domain + "/send?id=" + res.id;
         txt = document.getElementById("name");
         txt.remove();
         btn = document.getElementById("btn");
