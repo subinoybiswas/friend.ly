@@ -15,9 +15,6 @@ body {
 .login-box {
   display: flex;
   flex-direction: column;
-  height: 30vh;
-  padding-top: 37.5%;
-  padding-bottom: 37.5%;
   align-items: center;
   justify-content: center;
   border: 6px solid transparent;
@@ -38,7 +35,8 @@ body {
 @media only screen and (max-width: 600px) {
   .login-box {
     width: 90vw;
-    height: 70vh;
+    min-height: 70vh;
+    max-height: fit-content;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -54,11 +52,20 @@ body {
     margin-bottom: 20px;
     color: aliceblue;
   }
+  .after-sent {
+    font-size: 2ch;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 2vh;
+    overflow: scroll;
+  }
 }
 
 @media only screen and (min-width: 601px) {
   .login-box {
     width: 55vh;
+    min-height: 70vh;
+    max-height: fit-content;
   }
   /* #btn { */
   /* width: 20vh; */
@@ -74,6 +81,13 @@ body {
   #name:focus {
     width: 46vh;
     height: 8vh;
+  }
+  .after-sent {
+    font-size: 2ch;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 2vh;
+    overflow: scroll;
   }
 }
 
@@ -107,3 +121,5 @@ img {
   bottom: 2vh;
   color: aliceblue;
 }
+
+

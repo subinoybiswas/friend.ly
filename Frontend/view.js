@@ -4,6 +4,7 @@ const queryString = window.location.search;
 console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
 var id = urlParams.get("id");
+var pass= urlParams.get("pass");
 console.log(id);
 doc = document.getElementsByClassName("msg-box");
 useName = document.getElementsByTagName("h1");
@@ -25,7 +26,7 @@ function createElement(name, messgae, cnt) {
   nme[cnt].appendChild(inElement);
   nme[cnt].appendChild(msgElement);
 }
-id = xhr.open("GET", "/hi?id=" + id);
+id = xhr.open("GET", "/hi?id=" + id+"&pass="+pass);
 xhr.send();
 xhr.onload = () => {
   if (xhr.status == 200) {
@@ -38,10 +39,10 @@ xhr.onload = () => {
       res.forEach((ele) => {
         if (count != res.length - 1 && count < res.length - 1) {
           createElement(ele.name, ele.message, count);
-        } else if (count == res.length + 1);
+        } 
         {
-          console.log(ele.myName);
-          userName = ele.myName;
+          console.log(ele.stringValue);
+          userName = ele.stringValue;
           useName[0].innerText = "Welcome, "+userName;
         }
         count += 1;
