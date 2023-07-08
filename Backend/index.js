@@ -21,8 +21,8 @@ const private_key_id = process.env.PRIVATE_KEY_ID;
 //const private_key = process.env.PRIVATE_KEY;
 const private_key = Buffer.from(process.env.PRIVATE_KEY , 'base64').toString('ascii');
 // const private_key= process.env.PRIVATE_KEY
-          ? process.env.PRIVATE_KEY.replace(/\\n/gm, "\n")
-          : undefined;
+          // ? process.env.PRIVATE_KEY.replace(/\\n/gm, "\n")
+          // : undefined;
 console.log(private_key);
 const client_email = process.env.CLIENT_EMAIL;
 const auth_uri = process.env.AUTH_URI;
