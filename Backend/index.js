@@ -22,6 +22,7 @@ const private_key_id = process.env.PRIVATE_KEY_ID;
 const private_key= process.env.PRIVATE_KEY
           ? process.env.PRIVATE_KEY.replace(/\\n/gm, "\n")
           : undefined;
+console.log(private_key);
 const client_email = process.env.CLIENT_EMAIL;
 const auth_uri = process.env.AUTH_URI;
 const token_uri = process.env.TOKEN_URI;
