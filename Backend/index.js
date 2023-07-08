@@ -2,8 +2,6 @@ const express = require("express");
 const path = require("path");
 var randomstring = require("randomstring");
 require("dotenv").config();
-var api = require('../api/index');
-app.use("/",api);
 const {
   initializeApp,
   applicationDefault,
