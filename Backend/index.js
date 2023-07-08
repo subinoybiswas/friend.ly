@@ -136,4 +136,6 @@ app.get("/send", (req, res) => {
   res.sendFile(path.join(__dirname, "../Frontend/writeMessage.html"));
 });
 
-app.listen(1000);
+app.listen(process.env.PORT||3000);
+
+module.export=app;
