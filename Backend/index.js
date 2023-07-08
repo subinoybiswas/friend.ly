@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 var randomstring = require("randomstring");
-require("dotenv").config();
+// require("dotenv").config();
 const {
   initializeApp,
   applicationDefault,
