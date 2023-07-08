@@ -12,7 +12,7 @@ const {
   FieldValue,
   Filter,
 } = require("firebase-admin/firestore");
-credentials =path.join("etc/secrets/secret.json");
+credentials =path.join("/etc/secrets/secret.json");
 const serviceAccount = require(credentials);
 //console.log(path.join(__dirname, "/secret/secret.json"));
 const app = express();
