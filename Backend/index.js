@@ -19,11 +19,13 @@ const type = process.env.TYPE;
 const project_id = process.env.PROJECT_ID;
 const private_key_id = process.env.PRIVATE_KEY_ID;
 //const private_key = process.env.PRIVATE_KEY;
-const private_key = Buffer.from(process.env.PRIVATE_KEY , 'base64').toString('ascii');
+//const private_key = Buffer.from(process.env.PRIVATE_KEY , 'base64').toString('ascii');
 // const private_key= process.env.PRIVATE_KEY
           // ? process.env.PRIVATE_KEY.replace(/\\n/gm, "\n")
           // : undefined;
-console.log(private_key);
+//console.log(private_key);
+
+const { private_key } = JSON.parse(process.env.PRIVATE_KEY);
 const client_email = process.env.CLIENT_EMAIL;
 const auth_uri = process.env.AUTH_URI;
 const token_uri = process.env.TOKEN_URI;
@@ -34,7 +36,7 @@ const serviceAccount = {
   type: type,
   project_id: project_id,
   private_key_id: private_key_id,
-  private_key: private_key,
+  private_key,
   client_email: client_email,
   client_id: client_id,
   auth_uri: auth_uri,
