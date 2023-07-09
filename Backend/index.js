@@ -3,7 +3,7 @@ const path = require("path");
 var randomstring = require("randomstring");
 // Enable for Desktop use if using .env file. 
 // If you use .json format for credentials keep it enabled.
-// require("dotenv").config();
+//require("dotenv").config();
 const {
   initializeApp,
   applicationDefault,
@@ -61,7 +61,7 @@ app.use(express.json());
 app.post("/register", async (req, res) => {
   const { myName } = req.body;
   if (myName == undefined || myName == null) {
-    res.status.send();
+    res.status(400).send();
   } else {
     k = randomstring.generate(10);
     p = randomstring.generate(10);
