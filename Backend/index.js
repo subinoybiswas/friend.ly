@@ -1,6 +1,8 @@
 const express = require("express");
 const path = require("path");
 var randomstring = require("randomstring");
+// Enable for Desktop use if using .env file. 
+// If you use .json format for credentials keep it enabled.
 // require("dotenv").config();
 const {
   initializeApp,
@@ -19,19 +21,14 @@ const client_id = process.env.CLIENT_ID;
 const type = process.env.TYPE;
 const project_id = process.env.PROJECT_ID;
 const private_key_id = process.env.PRIVATE_KEY_ID;
-//const private_key= process.env.PRIVATE_KEY
-//          ? process.env.PRIVATE_KEY.replace(/\\n/gm, "\n")
-//          : undefined;
-//const private_key = process.env.PRIVATE_KEY;
 const { private_key } = JSON.parse(process.env.PRIVATE_KEY);
-//console.log(private_key);
 const client_email = process.env.CLIENT_EMAIL;
 const auth_uri = process.env.AUTH_URI;
 const token_uri = process.env.TOKEN_URI;
 const auth_provider_x509_cert_url = process.env.AUTH_PROVIDER;
 const client_x509_cert_url = process.env.CLIENT_CERT;
 const universe_domain = process.env.UNI_DOMAIN;
-//console.log(project_id);
+//Use this format while using .env file
 const serviceAccount = {
   type: type,
   project_id: project_id,
@@ -45,10 +42,14 @@ const serviceAccount = {
   client_x509_cert_url: client_x509_cert_url,
   universe_domain: universe_domain,
 };
-console.log(serviceAccount);
-//console.log(path.join(__dirname, "/secret/secret.json"));
+//console.log(serviceAccount);
+
+//Use this if json file for Firebase Authentication
+//credentials = path.join(__dirname, "etc/secrets/secret.json");
+//const serviceAccount = require(credentials);
+//console.log(serviceAccount);
+
 const app = express();
-console.log(__dirname);
 
 initializeApp({
   credential: cert(serviceAccount),
@@ -57,12 +58,46 @@ initializeApp({
 const db = getFirestore();
 app.use(express.json());
 
+app.post("/register", async (req, res) => {
+  const { myName } = req.body;
+  if (myName == undefined || myName == null) {
+    res.status.send();
+  } else {
+    k = randomstring.generate(10);
+    p = randomstring.generate(10);
+    // console.log(k);
+    //storing the name in a specific document name
+    docRef = db.collection(k).doc("sQaNcfpgRu7wyzNHfeNDgB7cJil3cb8eYH9pMpTp");
+    docRef.set({
+      //storing the name and password of user
+      myName: myName,
+      pass: p,
+    });
+    res.status(200).json({ id: k, pass: p });
+  }
+});
+
+app.post("/hi", async (req, res) => {
+  const { MaskedName, message } = req.body;
+  const id = req.query.id;
+  if (id == undefined || MaskedName == undefined || message == undefined) {
+    res.status(400).send();
+  } else {
+    docRef = db.collection(id).doc(MaskedName);
+    docRef.set({
+      message: message,
+    });
+    res.status(200).send();
+  }
+});
+
 app.get("/hi", async (req, res) => {
   const id = req.query.id;
   const pass = req.query.pass;
   if (id != undefined || pass != undefined) {
     docRef = db.collection(id);
     data = await docRef.get();
+    //Using a specific docname to get the username
     nam = await docRef.doc("sQaNcfpgRu7wyzNHfeNDgB7cJil3cb8eYH9pMpTp").get();
     if (pass == nam._fieldsProto.pass.stringValue) {
       a = data.docs.map((doc) => {
@@ -71,6 +106,7 @@ app.get("/hi", async (req, res) => {
           a["name"] = doc.id;
           return a;
         } else {
+          //only sending the name and not the password
           namobj = nam._fieldsProto.myName;
           return namobj;
         }
@@ -101,37 +137,7 @@ app.get("/name", async (req, res) => {
   }
 });
 
-app.post("/hi", async (req, res) => {
-  const { MaskedName, message } = req.body;
-  const id = req.query.id;
-  if (id == undefined || MaskedName == undefined || message == undefined) {
-    res.status(400).send();
-  } else {
-    docRef = db.collection(id).doc(MaskedName);
-    docRef.set({
-      message: message,
-    });
-    res.status(200).send();
-  }
-});
-
-app.post("/register", async (req, res) => {
-  const { myName } = req.body;
-  if (myName == undefined || myName == null) {
-    res.status.send();
-  } else {
-    k = randomstring.generate(10);
-    p = randomstring.generate(10);
-    // console.log(k);
-    docRef = db.collection(k).doc("sQaNcfpgRu7wyzNHfeNDgB7cJil3cb8eYH9pMpTp");
-    docRef.set({
-      myName: myName,
-      pass: p,
-    });
-    res.status(200).json({ id: k, pass: p });
-  }
-});
-
+//Routing
 app.use(express.static(path.join(__dirname, "../Frontend")));
 console.log("Revolution has begun");
 app.get("/view", (req, res) => {
