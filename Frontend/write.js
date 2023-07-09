@@ -1,9 +1,11 @@
 const queryString = window.location.search;
+var loading = document.getElementsByClassName("loading")[0];
+loading.hidden = true;
+var arrow = document.getElementById("btn");
 //console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
 var id = urlParams.get("id");
 //console.log(id);
-
 const xhr = new XMLHttpRequest();
 
 xhr.open("GET", "/name?id=" + id);
@@ -17,6 +19,8 @@ xhr.onload = () => {
   }
 };
 function sendPOST() {
+  arrow.hidden = true;
+  loading.hidden = false;
   xhr.open("POST", "/hi?id=" + id);
   xhr.setRequestHeader("Content-type", "application/json");
   var maskName = document.getElementById("name").value;

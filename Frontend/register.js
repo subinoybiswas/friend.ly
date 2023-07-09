@@ -1,7 +1,12 @@
 const xhr = new XMLHttpRequest();
 domain = window.location.host;
 htt = window.location.protocol;
+var loading = document.getElementsByClassName("loading")[0];
+loading.hidden = true;
+var arrow = document.getElementById("btn");
 function send() {
+  loading.hidden = false;
+  arrow.hidden = true;
   nme = document.getElementById("name").value;
   if (nme != null && nme != undefined && nme != "") {
     xhr.open("POST", "/register");

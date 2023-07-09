@@ -11,22 +11,26 @@
       rel="stylesheet"
     />
     <link rel="icon" href="favicon.png" type="image/x-icon" />
-    <script src="write.js"></script>
+    
     <title>friend.ly</title>
   </head>
   <body>
+    
     <div class="msg-box">
       <div class="name" id="greetname">Confess to</div>
       <input type="text" id="name" placeholder="Enter a fake name" />
-      <textarea class="msg-input" placeholder="Type your Message Here">
-</textarea
-      >
+      <textarea
+        class="msg-input"
+        placeholder="Type your Message Here"
+      ></textarea>
       <button id="btn" onclick="sendPOST()">
         <img class="btn-img" src="app-g2f8bdbdec_1280.png" alt="arrow" />
       </button>
+      <img src="loading.gif" alt="loading" class="loading" />
     </div>
     <a href="https://linktr.ee/heysubinoy" id="developer">
-      <div >Developed by Subinoy Biswas</div>
-  </a>
+      <div>Developed by Subinoy Biswas</div>
+    </a>
+    <script src="write.js"></script>
   </body>
 </html>

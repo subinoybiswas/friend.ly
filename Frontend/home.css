@@ -121,5 +121,10 @@ img {
   bottom: 2vh;
   color: aliceblue;
 }
+.loading {
 
+  text-align: center;
+  width: 45px;
+  height: 45px;
+}
 

@@ -62,8 +62,8 @@ body {
     min-height: 40vh;
   }
   /* button { */
-    /* width: 15vh; */
-    /* min-height: 5vh; */
+  /* width: 15vh; */
+  /* min-height: 5vh; */
   /* } */
   #name {
     width: 80vw;
@@ -86,7 +86,7 @@ body {
   /* } */
   textarea.msg-input {
     font-size: 2ch;
-    font-family: "Roboto", sans-serif;;
+    font-family: "Roboto", sans-serif;
     width: 45vh;
     min-height: 5vh;
     resize: none;
@@ -124,9 +124,13 @@ img {
   user-select: none;
 }
 
-.msg-show{
+.msg-show {
   font-size: 2.5ch;
   text-align: center;
   margin-bottom: 5vh;
   color: rgb(217, 223, 223);
+}
+.loading {
+  width: 45px;
+  height: 45px;
 }
