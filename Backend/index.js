@@ -36,7 +36,7 @@ const serviceAccount = {
   type: type,
   project_id: project_id,
   private_key_id: private_key_id,
-  private_key,
+  private_key: private_key,
   client_email: client_email,
   client_id: client_id,
   auth_uri: auth_uri,
@@ -47,7 +47,7 @@ const serviceAccount = {
 };
 //console.log(path.join(__dirname, "/secret/secret.json"));
 const app = express();
-console.log(__dirname);
+//console.log(__dirname);
 
 initializeApp({
   credential: cert(serviceAccount),
