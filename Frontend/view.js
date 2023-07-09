@@ -25,6 +25,7 @@ function createElement(name, messgae, cnt) {
   nme = document.getElementsByClassName("msg-box-inner");
   nme[cnt].appendChild(inElement);
   nme[cnt].appendChild(msgElement);
+  console.log(cnt);
 }
 id = xhr.open("GET", "/hi?id=" + id + "&pass=" + pass);
 xhr.send();
@@ -37,15 +38,15 @@ xhr.onload = () => {
     count = 0;
     if (resp != null && resp != undefined) {
       res.forEach((ele) => {
-        if (count != res.length - 1 && count < res.length - 1) {
+        if (ele.hasOwnProperty('stringValue')==false) {
           createElement(ele.name, ele.message, count);
+          count += 1;
         }
-        {
+        else{
           console.log(ele.stringValue);
           userName = ele.stringValue;
           useName[0].innerText = "Welcome, " + userName;
         }
-        count += 1;
       });
       noMore = document.createElement("div");
       noMore.className = "no-more";
@@ -61,7 +62,7 @@ xhr.onload = () => {
     // noMore = document.createElement("div");
     // noMore.className = "no-more";
     // noMore.innerHTML = "No More Messages!";
-    doc[0].appendChild(noMore);
+    //doc[0].appendChild(noMore);
     // createElement("Subinoy", "How are you!");
   } else {
     console.log(`Error: ${xhr.status}`);
