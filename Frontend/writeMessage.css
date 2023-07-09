@@ -61,10 +61,10 @@ body {
   .msg-input:focus {
     min-height: 40vh;
   }
-  button {
-    width: 15vh;
-    min-height: 5vh;
-  }
+  /* button { */
+    /* width: 15vh; */
+    /* min-height: 5vh; */
+  /* } */
   #name {
     width: 80vw;
     min-height: 5vh;
@@ -116,7 +116,7 @@ body {
 
 #btn {
   border-radius: 50%;
-  padding: 10px;
+  padding: 5px;
 }
 img {
   width: 35px;
