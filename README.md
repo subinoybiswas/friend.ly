@@ -1,14 +1,19 @@
-# friend.ly
+# friend.ly - An Anonymous Webapp for Friends and Family
 
 ## Description
 **friend.ly** is a Node.js and Express.js project that allows users to send messages to their friends using a fake name. It provides a simple and anonymous way to communicate with friends without revealing personal information.
 
 ## Visit the App
 Find this app [here](https://friendly-2gdr.onrender.com)
+
 ## Features
 - Send messages to friends using a fake name.
 - Anonymous communication to protect user privacy.
 - Easy-to-use interface for a seamless messaging experience.
+
+## Requirements
+- Nodejs on your system or deployment environment.
+- A Firestore Database( Just provide the credentials to the app it configures it automatically)
 
 ## Installation
 To install and run friend.ly on your local machine, follow these steps:
@@ -58,11 +63,11 @@ Before running the application, you need to set up the following configuration:
    Alternatively, you can put the secrets in a `.json` file, as I did in the `etc/secrets/secret.json` file. This process is much easier for the local environment.
 
 ## Backend
-The backend of the friend.ly project is built using Node.js and Express.js. It provides the API endpoints for sending and retrieving messages. The backend code can be found in the `backend` directory.
+The backend of the friend.ly project is built using Node.js and Express.js. It provides the API endpoints for sending and retrieving messages. The backend code can be found in the `Backend` directory.
 
 To start the backend server, run the following command:
 ```
-npm run backend
+npm run start
 ```
 
 ## Frontend
@@ -76,11 +81,13 @@ To deploy friend.ly to a production environment, follow these steps:
 1. Set up a Firestore Database.
 2. Configure the necessary environment variables in your production environment.
 3. Set up the project and install the necessary dependencies.
-4. Start the backend server:
+4. Go to the correct directory (`Backend`)
+5. Start the backend server:
    ```
    npm run start
    ```
-5. Enjoy your app.
+6. Enjoy your app.
+
 ## Contributing
 Contributions to friend.ly are welcome! If you find any bugs, have feature requests, or want to contribute code, please open an issue or submit a pull request to the project repository.
 
