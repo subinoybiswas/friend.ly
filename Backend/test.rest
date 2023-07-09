@@ -2,6 +2,6 @@ POST http://localhost:1000/hi?id=HI
 Content-Type: application/json
 
 {
-"MaskedName":"SubhStalkfgdher",
+"MaskedName":"MaskedName",
 "message":"hi"
 }
