@@ -1,4 +1,4 @@
-# friend.ly - An Anonymous Webapp for Friends and Family
+# friend.ly - An Anonymous Web App for Friends and Family
 
 ## Description
 **friend.ly** is a Node.js and Express.js project that allows users to send messages to their friends using a fake name. It provides a simple and anonymous way to communicate with friends without revealing personal information.
@@ -12,7 +12,7 @@ Find this app [here](https://friendly-2gdr.onrender.com)
 - Easy-to-use interface for a seamless messaging experience.
 
 ## Requirements
-- Nodejs on your system or deployment environment.
+- Nodejs on your system or on your deployment environment.
 - A Firestore Database( Just provide the credentials to the app it configures it automatically)
 
 ## Installation
@@ -26,7 +26,7 @@ To install and run friend.ly on your local machine, follow these steps:
    ```
    cd friend.ly
    ```
-3. Navigate to Backend (Root of the Node project):
+3. Navigate to `Backend` (Root of the Node project):
    ```
    cd Backend
    ```
@@ -36,7 +36,7 @@ To install and run friend.ly on your local machine, follow these steps:
    ```
 
 ## Configuration
-Before running the application, you need to set up the following configuration:
+Before running the application, you need to set up the following configurations:
 
 1. Create a `.env` file in the root directory.
 2. Specify the following environment variables in the `.env` file:
