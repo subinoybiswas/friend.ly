@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 var randomstring = require("randomstring");
-// require("dotenv").config();
+require("dotenv").config();
 const {
   initializeApp,
   applicationDefault,
@@ -13,25 +13,25 @@ const {
   FieldValue,
   Filter,
 } = require("firebase-admin/firestore");
+const { Console } = require("console");
 
 const client_id = process.env.CLIENT_ID;
 const type = process.env.TYPE;
 const project_id = process.env.PROJECT_ID;
 const private_key_id = process.env.PRIVATE_KEY_ID;
+//const private_key= process.env.PRIVATE_KEY
+//          ? process.env.PRIVATE_KEY.replace(/\\n/gm, "\n")
+//          : undefined;
 //const private_key = process.env.PRIVATE_KEY;
-//const private_key = Buffer.from(process.env.PRIVATE_KEY , 'base64').toString('ascii');
-// const private_key= process.env.PRIVATE_KEY
-          // ? process.env.PRIVATE_KEY.replace(/\\n/gm, "\n")
-          // : undefined;
-//console.log(private_key);
-
 const { private_key } = JSON.parse(process.env.PRIVATE_KEY);
+//console.log(private_key);
 const client_email = process.env.CLIENT_EMAIL;
 const auth_uri = process.env.AUTH_URI;
 const token_uri = process.env.TOKEN_URI;
 const auth_provider_x509_cert_url = process.env.AUTH_PROVIDER;
 const client_x509_cert_url = process.env.CLIENT_CERT;
 const universe_domain = process.env.UNI_DOMAIN;
+//console.log(project_id);
 const serviceAccount = {
   type: type,
   project_id: project_id,
@@ -45,9 +45,10 @@ const serviceAccount = {
   client_x509_cert_url: client_x509_cert_url,
   universe_domain: universe_domain,
 };
+//console.log(serviceAccount);
 //console.log(path.join(__dirname, "/secret/secret.json"));
 const app = express();
-//console.log(__dirname);
+console.log(__dirname);
 
 initializeApp({
   credential: cert(serviceAccount),
@@ -144,4 +145,3 @@ app.get("/send", (req, res) => {
 });
 
 app.listen(process.env.PORT || 3000);
-
