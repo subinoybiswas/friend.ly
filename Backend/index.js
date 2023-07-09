@@ -44,7 +44,7 @@ const serviceAccount = {
 };
 //console.log(serviceAccount);
 
-//Use this if json file for Firebase Authentication
+//Use this if using json file for Firebase Authentication
 //credentials = path.join(__dirname, "etc/secrets/secret.json");
 //const serviceAccount = require(credentials);
 //console.log(serviceAccount);
