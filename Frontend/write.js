@@ -15,7 +15,7 @@ xhr.onload = () => {
     pnm = xhr.response;
     console.log(typeof pnm);
     var greetName = document.getElementById("greetname");
-    greetName.innerHTML = "Send message to " + pnm.slice(1, pnm.length - 1);
+    greetName.innerHTML = "Send a message to " + pnm.slice(1, pnm.length - 1);
   }
 };
 function sendPOST() {
