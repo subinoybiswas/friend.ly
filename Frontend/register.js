@@ -25,6 +25,7 @@ function send() {
         txt.remove();
         btn = document.getElementById("btn");
         btn.remove();
+        loading.hidden = true;
         msg1 = document.createElement("div");
         cpy1 = document.createElement("a");
         msg2 = document.createElement("div");
