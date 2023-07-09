@@ -40,6 +40,8 @@ body {
   margin-bottom: 20px;
   color: aliceblue;
   text-align: center;
+  margin-left: 2vw;
+  margin-right: 2vw;
   /* overflow: scroll; */
 }
 @media only screen and (max-width: 600px) {
@@ -125,6 +127,8 @@ img {
 }
 
 .msg-show {
+  margin-left: 2vw;
+  margin-right: 2vw;
   font-size: 2.5ch;
   text-align: center;
   margin-bottom: 5vh;
