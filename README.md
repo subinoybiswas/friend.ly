@@ -90,6 +90,3 @@ To deploy friend.ly to a production environment, follow these steps:
 
 ## Contributing
 Contributions to friend.ly are welcome! If you find any bugs, have feature requests, or want to contribute code, please open an issue or submit a pull request to the project repository.
-
-## License
-The friend.ly project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute the code as per the terms of the license.
