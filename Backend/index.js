@@ -45,7 +45,7 @@ const serviceAccount = {
   client_x509_cert_url: client_x509_cert_url,
   universe_domain: universe_domain,
 };
-//console.log(serviceAccount);
+console.log(serviceAccount);
 //console.log(path.join(__dirname, "/secret/secret.json"));
 const app = express();
 console.log(__dirname);
