@@ -57,7 +57,7 @@ body {
     color: aliceblue;
     text-align: center;
     margin-bottom: 2vh;
-    overflow: scroll;
+    overflow: hidden;
   }
 }
 
@@ -87,7 +87,7 @@ body {
     color: aliceblue;
     text-align: center;
     margin-bottom: 2vh;
-    overflow: scroll;
+    overflow: hidden;
   }
 }
 
@@ -122,9 +122,7 @@ img {
   color: aliceblue;
 }
 .loading {
-
   text-align: center;
   width: 45px;
   height: 45px;
 }
-
