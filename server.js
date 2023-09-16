@@ -3,7 +3,7 @@ const path = require("path");
 var randomstring = require("randomstring");
 // Enable for Desktop use if using .env file. 
 // If you use .json format for credentials keep it enabled.
-//require("dotenv").config();
+// require("dotenv").config();
 const {
   initializeApp,
   applicationDefault,
@@ -17,37 +17,37 @@ const {
 } = require("firebase-admin/firestore");
 const { Console } = require("console");
 
-// const client_id = process.env.CLIENT_ID;
-// const type = process.env.TYPE;
-// const project_id = process.env.PROJECT_ID;
-// const private_key_id = process.env.PRIVATE_KEY_ID;
-// const { private_key } = JSON.parse(process.env.PRIVATE_KEY);
-// const client_email = process.env.CLIENT_EMAIL;
-// const auth_uri = process.env.AUTH_URI;
-// const token_uri = process.env.TOKEN_URI;
-// const auth_provider_x509_cert_url = process.env.AUTH_PROVIDER;
-// const client_x509_cert_url = process.env.CLIENT_CERT;
-// const universe_domain = process.env.UNI_DOMAIN;
+const client_id = process.env.CLIENT_ID;
+const type = process.env.TYPE;
+const project_id = process.env.PROJECT_ID;
+const private_key_id = process.env.PRIVATE_KEY_ID;
+const { private_key } = JSON.parse(process.env.PRIVATE_KEY);
+const client_email = process.env.CLIENT_EMAIL;
+const auth_uri = process.env.AUTH_URI;
+const token_uri = process.env.TOKEN_URI;
+const auth_provider_x509_cert_url = process.env.AUTH_PROVIDER;
+const client_x509_cert_url = process.env.CLIENT_CERT;
+const universe_domain = process.env.UNI_DOMAIN;
 // Use this format while using .env file
-// const serviceAccount = {
-  // type: type,
-  // project_id: project_id,
-  // private_key_id: private_key_id,
-  // private_key: private_key,
-  // client_email: client_email,
-  // client_id: client_id,
-  // auth_uri: auth_uri,
-  // token_uri: token_uri,
-  // auth_provider_x509_cert_url: auth_provider_x509_cert_url,
-  // client_x509_cert_url: client_x509_cert_url,
-  // universe_domain: universe_domain,
-// };
+const serviceAccount = {
+  type: type,
+  project_id: project_id,
+  private_key_id: private_key_id,
+  private_key: private_key,
+  client_email: client_email,
+  client_id: client_id,
+  auth_uri: auth_uri,
+  token_uri: token_uri,
+  auth_provider_x509_cert_url: auth_provider_x509_cert_url,
+  client_x509_cert_url: client_x509_cert_url,
+  universe_domain: universe_domain,
+};
 //console.log(serviceAccount);
 
 //Use this if using json file for Firebase Authentication
-credentials = path.join(__dirname, "secret.json");
-const serviceAccount = require(credentials);
-console.log(serviceAccount);
+// credentials = path.join(__dirname, "secret.json");
+// const serviceAccount = require(credentials);
+// console.log(serviceAccount);
 
 const app = express();
 
