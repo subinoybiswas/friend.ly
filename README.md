@@ -1,7 +1,7 @@
 # friend.ly - An Anonymous Message Web App for Friends and Family
 
 ## Visit the App
-Find this app [here](https://friendly-2gdr.onrender.com)
+Find this app [here](friendly.up.railway.app)
 
 ## Description
 **friend.ly** is a Node.js and Express.js project that allows users to send messages to their friends using a fake name. It provides a simple and anonymous way to communicate with friends without revealing personal information.
