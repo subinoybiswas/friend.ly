@@ -26,11 +26,7 @@ To install and run friend.ly on your local machine, follow these steps:
    ```
    cd friend.ly
    ```
-3. Navigate to `Backend` (Root of the Node project):
-   ```
-   cd Backend
-   ```
-4. Install the dependencies:
+3. Install the dependencies:
    ```
    npm install
    ```
@@ -60,7 +56,7 @@ Before running the application, you need to set up the following configurations:
    ```
    {"private_key":"-----BEGIN PRIVATE KEY-----\n..blah...blah..blah----END PRIVATE KEY-----\n"}
    ```
-   Alternatively, you can put the secrets in a `.json` file, as I did in the `etc/secrets/secret.json` file. This process is much easier for the local environment.
+   Alternatively, you can put the secrets in a `.json` file, as I did in the `secret.json` file. This process is much easier for the local environment.
 
 ## Backend
 The backend of the friend.ly project is built using Node.js and Express.js. It provides the API endpoints for sending and retrieving messages. The backend code can be found in the `Backend` directory.
@@ -73,7 +69,7 @@ npm run start
 ## Frontend
 The front end of the friend.ly project is built using HTML, CSS, and JavaScript. It provides the user interface for composing and viewing messages. The frontend code can be found in the `Frontend` directory.
 
-The routing for the front end is primarily handled via the `index.js` file at `Backend/index.js`. Then it gets rerouted via the client-side javascript.
+The routing for the front end is primarily handled via the `server.js` file at `/index.js`. Then it gets rerouted via the client-side javascript.
 
 ## Deployment
 To deploy friend.ly to a production environment, follow these steps:
@@ -81,7 +77,7 @@ To deploy friend.ly to a production environment, follow these steps:
 1. Set up a Firestore Database.
 2. Configure the necessary environment variables in your production environment.
 3. Set up the project and install the necessary dependencies.
-4. Go to the correct directory (`Backend`)
+4. Go to the correct directory (Root)
 5. Start the backend server:
    ```
    npm run start
